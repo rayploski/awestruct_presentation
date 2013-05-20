@@ -1,0 +1,7 @@
+# author is used in the atom feed
+title: Red Hat Web-Based Presentation
+description: Some witty description
+
+profiles:
+  development:
+    base_url: http://localhost:4242
