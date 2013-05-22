@@ -3,250 +3,190 @@ layout: base
 ---
 
 .slides
-  %section
-    %h1 Red Hat JBoss
-    %h3 Enterprise Middleware
-    %p
-      %small
-        Created by
-        %a{ :href=>"http://hakim.se"}#{site.author}
-        &nbsp;
-        %a{ :href=>"http://twitter.com/jbossdeveloper"}@jbossdeveloper
+  %section.title(data-state="intro" )
+    .title-information
+      %h2.invert Red Hat JBoss Developer Program
+      %h5
+    .title-author
+      Ray Ploski
+      %br
+        Director, Developer Program & Strategy
+      %a{ :href=>"http://twitter.com/rayploski"}@rayploski
 
-  %section
-    %h2 Heads Up
-    %p This is a presentation framework for easily creating beautiful presentations using HTML. You'll need a browser with support for CSS 3D transforms to see it in its full glory.
+  %section(data-state="flowers")
+    %h2 JBOSS AS GETS A NEW NAME
 
-    %aside.notes
-      Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 
-  / Example of nested vertical slides
   %section
     %section
-      %h2 Vertical Slides
-      %p
-        Slides can be nested inside of other slides,
-        try pressing
-        = succeed "." do
-          %a.navigate-down{:href => "#"} down
-      %a.image.navigate-down{:href => "#"}
-        %img{:alt => "Down arrow", :height => "238", :src => "https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png", :width => "178"}/
+      %h3 JBoss AS Gets a New Name
+      %a{ :href=>"http://www.wildfly.org", :target=>"_blank"}
+        %img.clean{ :src=>"#{site.base_url}/images/wildfly_logo_600px.png"}
+
     %section
-      %h2 Basement Level 1
-      %p Press down or up to navigate.
+      %h3 Why?
+      %h5 TO REDUCE CONFUSION
+      %ul.fragment
+        %li Previously JBoss Meant:
+        %ol
+          %li.fragment A Project
+          %li.fragment A Community
+          %li.fragment A Product Line
+
     %section
-      %h2 Basement Level 2
-      %p Cornify
-      %a.test{:href => "http://cornify.com"}
-        %img{:alt => "Unicorn", :height => "326", :src => "https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif", :width => "280"}/
+      %h3 What Changes?
+      %ul
+        %li Project Name
+        %li IRC, Forums, Issue Tracker
+        %li Faster Release Cadence
+
     %section
-      %h2 Basement Level 3
-      %p That's it, time to go back up.
-      %a.image{:href => "#/2"}
-        %img{:alt => "Up arrow", :height => "238", :src => "https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png", :style => "-webkit-transform: rotate(180deg);", :width => "178"}/
-  %section
-    %h2 Point of View
-    %p
-      Press
-      %strong ESC
-      to enter the slide overview. Hold down alt and click on any element to zoom in on it using
-      = succeed "." do
-        %a{:href => "http://lab.hakim.se/zoom-js"} zoom.js
-      Alt + click anywhere to zoom back out.
-  %section
-    %h2 slid.es
-    %p
-      If you don't like writing slides in HTML you can use the online editor
-      = succeed "." do
-        %a{:href => "http://www.slid.es", :target => "_blank"} slid.es
-  %section
-    %h2 Works in Mobile Safari
-    %p
-      Try it out! You can swipe through the slides and pinch your way to the overview.
-  %section
-    %h2 Marvelous Unordered List
-    %ul
-      %li No order here
-      %li Or here
-      %li Or here
-      %li Or here
-  %section
-    %h2 Fantastic Ordered List
-    %ol
-      %li One is smaller than...
-      %li Two is smaller than...
-      %li Three!
-  %section{"data-markdown" => ""}
-    %script{:type => "text/template"}
-      \## Markdown support
+      %h3 What Stays the Same?
+      %ul
+        %li Red Hat's Commitment to Open Source
+        %li Project Governance
+        %li Codebase, community
+        %li
+          %term JBoss
+          remains with product line
+      %br
+      %br
+      %img.clean.fragment{ :src=>"#{site.base_url}/images/rhjb-logotype.png"}
 
-      For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-  %section#transitions
-    %h2 Transition Styles
-    %p
-      You can select from different transitions, like:
-      %br/
-      %a{:href => "?transition=cube#/transitions"} Cube
-      \-
-      %a{:href => "?transition=page#/transitions"} Page
-      \-
-      %a{:href => "?transition=concave#/transitions"} Concave
-      \-
-      %a{:href => "?transition=zoom#/transitions"} Zoom
-      \-
-      %a{:href => "?transition=linear#/transitions"} Linear
-      \-
-      %a{:href => "?transition=fade#/transitions"} Fade
-      \-
-      %a{:href => "?transition=none#/transitions"} None
-      \-
-      %a{:href => "?#/transitions"} Default
-  %section#themes
-    %h2 Themes
-    %p
-      Reveal.js comes with a few themes built in:
-      %br/
-      %a{:href => "?theme=sky#/themes"} Sky
-      \-
-      %a{:href => "?theme=beige#/themes"} Beige
-      \-
-      %a{:href => "?theme=simple#/themes"} Simple
-      \-
-      %a{:href => "?theme=serif#/themes"} Serif
-      \-
-      %a{:href => "?theme=night#/themes"} Night
-      \-
-      %a{:href => "?#/themes"} Default
-    %p
-      %small
-        * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the
-        %code <head>
-        using a
-        = succeed "." do
-          %code <link>
-  %section
-    %section{"data-state" => "alert"}
-      %h2 Global State
-      %p
-        Set
-        %code data-state="something"
-        on a slide and
-        %code "something"
-        will be added as a class to the document element when the slide is open. This lets you
-        apply broader style changes, like switching the background.
-      %a.image.navigate-down{:href => "#"}
-        %img{:alt => "Down arrow", :height => "238", :src => "https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png", :width => "178"}/
-    %section{"data-state" => "blackout"}
-      %h2 "blackout"
-      %a.image.navigate-down{:href => "#"}
-        %img{:alt => "Down arrow", :height => "238", :src => "https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png", :width => "178"}/
-    %section{"data-state" => "soothe"}
-      %h2 "soothe"
-      %a.image.navigate-next{:href => "#"}
-        %img{:alt => "Up arrow", :height => "238", :src => "https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png", :style => "-webkit-transform: rotate(-90deg);", :width => "178"}
-
-  %section{"data-state" => "customevent"}
-    %h2 Custom Events
-    %p
-      Additionally custom events can be triggered on a per slide basis by binding to the
-      %code data-state
-      name.
-    %pre
-      %code{:contenteditable => "", :style => "font-size: 18px; margin-top: 20px;"}
-        :preserve
-          Reveal.addEventListener( 'customevent', function() {
-                                  console.log( '"customevent" has fired' );
-                                  } );
-  %section
-    %h2 Clever Quotes
-    %p
-      These guys come in two forms, inline:
-      %q{:cite => "http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"}
-        The nice thing about standards is that there are so many to choose from
-      and block:
-    %blockquote{:cite => "http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"}
-      For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-      reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-  %section
-    %h2 Pretty Code
-    %pre
-      %code{:contenteditable => ""}
-        :preserve
-
-          function linkify( selector ) {
-            if( supports3DTransforms ) {
-
-              var nodes = document.querySelectorAll( selector );
-
-              for( var i = 0, len = nodes.length; i < len; i++ ) {
-                var node = nodes[i];
-
-                if( !node.className ) ) {
-                  node.className += ' roll';
-                }
-              };
-            }
-          }
-                                %p
-      Courtesy of
-      = succeed "." do
-        %a{:href => "http://softwaremaniacs.org/soft/highlight/en/description/"} highlight.js
-  %section
-    %h2 Intergalactic Interconnections
-    %p
-      You can link between slides internally,
-      = succeed "." do
-        %a{:href => "#/2/3"} like this
-  %section
     %section
-      %h2 Fragmented Views
-      %p Hit the next arrow...
-      %p.fragment ... to step through ...
-      %ol
-        %li.fragment
-          %code any type
-        %li.fragment
-          %em of view
-        %li.fragment
-          %strong fragments
+      %h3 The Process
+      %p  Community nominated names, community based election
+      %ul
+        %li 1000+ Suggestions
+        %li 5 Finalists
+        %li Over 250,000 visits to the vote page in 6 weeks
+
+    %section
+      %h3 What's New in WildFly 8?
+      %ul
+        %li Java EE 7
+        %li Much Faster
+        %ul.fragment
+          %li JPA and Hibernate Performance Improvements
+          %ul.fragment
+            %li Significant speed boosts
+            %li Expect SpecJ metrics
+          %li Undertow
+          %ul.fragment
+            %li Non-blocking web server with a Servlet implementation
+            %li Fast implementation
+            %li HTTP Upgrade Support - multiplexing
+            %li Enhanced Security Configuration
       %aside.notes
-        This slide has fragments which are also stepped through in the notes window.
+        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
     %section
-      %h2 Fragment Styles
-      %p There's a few styles of fragments, like:
-      %p.fragment.grow grow
-      %p.fragment.shrink shrink
-      %p.fragment.roll-in roll-in
-      %p.fragment.fade-out fade-out
-      %p.fragment.highlight-red highlight-red
-      %p.fragment.highlight-green highlight-green
-      %p.fragment.highlight-blue highlight-blue
+      %h3 WildFly 8 implements Java EE 7
+      %ul
+        %li
+          Concurrency Utilities for Java EE 1.0
+          %bold  (New to JEE!)
+        %li Java Persistence 2.1
+        %li JAX-RS: The Java API for RESTful Web Services 2.0
+        %li Java Servlet 3.1
+        %li Java Message Service 2.0
+        %li Enterprise JavaBeans 3.2
+        %li Contexts and Dependency Injection 1.1
+        %li Bean Validation 1.1
+        %li
+          Batch Applications for the Java Platform
+          %bold (New to JEE!)
+        %li
+          Java API for JSON Processing 1.0
+          %bold (New to JEE!)
+        %li
+          Java API for WebSocket 1.0
+          %bold (New to JEE!)
+  / Example of nested vertical slides
+
+  %section(data-state="starry-night" )
+    %h2.invert  RED HAT JBOSS
+    %h3.invert  DEVELOPER PROGRAM
   %section
-    %h2 Spectacular image!
-    %a.image{:href => "http://lab.hakim.se/meny/", :target => "_blank"}
-      %img{:alt => "Meny", :height => "299", :src => "http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png", :width => "320"}/
+    %section
+      %h4 Red Hat JBoss Developer Program
+      %ul
+        %li
+          Allows enterprise developers to access
+          %ul
+            %li
+              Enterprise
+              %strong binaries
+              to JBoss Platforms
+            %li
+              Enterprise
+              %strong developer forums
+            %li
+              Exclusive
+              %strong Content
+              -
+              webinars, quickstarts and more
+        %li
+          Free of Charge!
+          %ul
+            %li
+              Sign up at
+              %a{ :href=>"http://www.jboss.org"}jboss.org
+        %li
+          %small
+            Focused on developers being as productive as possible at building new applications on Red Hat JBoss Middleware
+          %ul
+            %li
+              Program intended for
+              %i development purposes only.
+    %section
+      %h4 Dev Program - Benefits
+      %ul
+        %li
+          %strong Access to Enterprise Binaries
+        %ul
+          %li Build your apps on stable and certified codebase
+          %li No need to migrate your applications from Community
+        %li
+          %strong Access to Enterprise Developer Forums
+          %ul
+            %li Collaborate with Red Hat experts and other enterprise developers.
+        %li
+          %strong  Exclusive Enterprise Content
+          %ul
+            %li Quickstarts, tutorials and webinars available only to Developer Program members.
+    %section
+      %h4 Dev Program - The Fine Print
+      %ul
+        %li
+          %strong Intended for Developer Use Only
+        %ul
+          %li Obligated to purchase one or more subscriptions if used outside of local development.
+        %li
+          %strong No support or maintenance
+          %ul
+            %li Major (x.0) and Minor (6.x) releases available with a developer subscription
+            %li
+              Micro (6.1.x) and Security Errata available
+              %span{ :style=>"color:red"} only
+              to commercial subscribers.
+        %li
+          %strong Forums focused on development related topics
+          %ul
+            %li No answers for production-focused topics
+
+  %section(data-state="hills" )
+    %h2 RELEASE CYCLE CHANGES
   %section
-    %h2 Export to PDF
-    %p
-      Presentations can be
-      = succeed "," do
-        %a{:href => "https://github.com/hakimel/reveal.js#pdf-export"} exported to PDF
-      below is an example that's been uploaded to SlideShare.
-    %iframe#slideshare{:allowfullscreen => "", :height => "356", :src => "http://www.slideshare.net/slideshow/embed_code/13872948", :style => "margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px", :width => "455"}
-    :javascript
-      document.getElementById('slideshare').attributeName = 'allowfullscreen';
+    %h4 Community and Enterprise Delta
+    %img{ :src=>"#{site.base_url}/images/release-cycle.png"}
+
   %section
-    %h2 Take a Moment
-    %p
-      Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-      during a presentation.
-  %section
-    %h2 Stellar Links
+    %h2  Links
     %ul
       %li
-        %a{:href => "https://github.com/hakimel/reveal.js"} Source code on GitHub
+        %a{:href => "https://docspace.corp.redhat.com/groups/goldengate"} Golden Gate Docspace
       %li
-        %a{:href => "http://hakim.se/projects/reveal-js"} Leave feedback on my site
+        %a{:href => "https://docspace.corp.redhat.com/docs/DOC-142762"} Customer-Facing Slides
       %li
-        %a{:href => "http://twitter.com/hakimel"} Follow me on Twitter
+        Questions?  Email - Ray Ploski
+        %a{:href => "mailto:ray@redhat.com"} (ray@redhat.com)
