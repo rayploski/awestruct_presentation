@@ -6,3 +6,5 @@ description: Some witty description
 profiles:
   development:
     base_url: http://localhost:4242
+  production:
+    base_url: http://devprogram-jbossdeveloper.rhcloud.com
