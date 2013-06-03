@@ -3,21 +3,76 @@
  ******************************************/
 
 /* Every summit section by default will have certain background settings */
-.blue-basic .reveal,
-.blue-globe .reveal,
-.blue-globe .reveal{
+.blue-basic   .reveal,
+.blue-text    .reveal,
+.green-basic  .reveal,
+.green-text   .reveal,
+.orange-basic .reveal,
+.orange-text  .reveal,
+.grey-basic   .reveal,
+.grey-text    .reveal,
+
+{
     background-repeat:no-repeat;
     background-position:center center;
     background-size: cover;
 }
+
+
+/* Two versions of each color scheme '.xxxx-basic' has a plain background, '.xxxx-text' has the announcement in it'
 
 /** BLUE **/
 .blue-basic .reveal {
     background-image: url("/images/blue_basic.png");
 }
 
-.blue-globe .reveal {
+.blue-text .reveal {
     background-image: url("/images/blue_globe.png");
+}
+
+
+/** GREEN **/
+.green-basic .reveal {
+    background-image: url("/images/green_basic.png");
+}
+
+.green-text .reveal {
+    background-image: url("/images/green_globe.png");
+}
+
+
+/** ORANGE **/
+.orange-basic .reveal {
+    background-image: url("/images/orange_basic.png");
+}
+
+.orange-text .reveal {
+    background-image: url("/images/orange_globe.png");
+}
+
+
+
+/** GREY **/
+.grey-basic .reveal {
+    background-image: url("/images/grey_basic.png");
+}
+
+.grey-text .reveal {
+    background-image: url("/images/grey_with_text.png");
+}
+
+/* Other CSS Rules for color templates */
+section[data-state=blue-basic],
+section[data-state=blue-basic],
+section[data-state=blue-text],
+section[data-state=green-basic],
+section[data-state=green-text],
+section[data-state=orange-basic],
+section[data-state=orange-text],
+section[data-state=grey-basic],
+section[data-state=grey-text]
+{
+    margin-top:1.8em;
 }
 
 
