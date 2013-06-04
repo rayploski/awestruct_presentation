@@ -61,6 +61,16 @@
     background-image: url("/images/grey_with_text.png");
 }
 
+
+/** PLAIN WHITE **/
+.white-basic .reveal {
+    background:none; /* Reset Background */
+    background:#ffffff; /* Make white */
+}
+
+
+
+
 /* Other CSS Rules for color templates */
 section[data-state=blue-basic],
 section[data-state=blue-basic],
